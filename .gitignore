@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules
+
+.idea
+
+#mac file
+.DS_Store
+npm-debug.log
+dist

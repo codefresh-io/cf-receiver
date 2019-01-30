@@ -1,0 +1,36 @@
+{
+  "name": "@codefresh-io/cf-receiver",
+  "version": "0.0.1-alpha1",
+  "description": "",
+  "main": "dist/index.js",
+  "author": "Ariel Henryson",
+  "scripts": {
+    "test": "karma start",
+    "build": "tsc"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/es6-promise": "0.0.32",
+    "@types/jasmine": "^2.8.6",
+    "awesome-typescript-loader": "^3.5.0",
+    "chai": "^3.5.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-coverage-istanbul-reporter": "^1.4.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.9",
+    "sinon": "^1.17.6",
+    "tslint": "^5.12.1",
+    "typescript": "3.2.4",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "rxjs": "^6.4.0"
+  }
+}
