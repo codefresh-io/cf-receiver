@@ -2,6 +2,7 @@
   "name": "@codefresh-io/cf-receiver",
   "version": "0.0.1-alpha1",
   "description": "",
+  "private": false,
   "main": "dist/index.js",
   "author": "Ariel Henryson",
   "scripts": {
