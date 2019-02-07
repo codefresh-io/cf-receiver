@@ -28,10 +28,6 @@ export class CfReceiverService {
             console.log(`watch for data from  ws://${this.config.endPoint}/${this.config.workflowID}`)
 
             this.connect(obser)
-
-            obser.next({
-                type: 'start'
-            })
         })
     }
 
@@ -46,6 +42,13 @@ export class CfReceiverService {
         this.log('connecting to WebSocket')
 
         this.ws = new WebSocket(`ws://${this.config.endPoint}/${this.config.workflowID}`)
+
+
+        this.ws.onopen = () => {
+            obser.next({
+                type: 'start'
+            })
+        }
 
 
         this.ws.onerror = (event: any) => {
