@@ -28,6 +28,10 @@ export class CfReceiverService {
             console.log(`watch for data from  ws://${this.config.endPoint}/${this.config.workflowID}`)
 
             this.connect(obser)
+
+            obser.next({
+                type: 'start'
+            })
         })
     }
 
