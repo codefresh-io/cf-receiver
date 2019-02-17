@@ -41,7 +41,7 @@ export class CfReceiverService {
     connect(obser) {
         this.log('connecting to WebSocket')
 
-        this.ws = new WebSocket(`ws://${this.config.endPoint}/${this.config.workflowID}`)
+        this.ws = new WebSocket(`${this.config.endPoint}/${this.config.workflowID}`)
 
 
         this.ws.onopen = () => {
