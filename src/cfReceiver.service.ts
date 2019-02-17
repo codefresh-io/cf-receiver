@@ -25,7 +25,7 @@ export class CfReceiverService {
      */
     watch() {
         return new Observable(obser => {
-            console.log(`watch for data from  ws://${this.config.endPoint}/${this.config.workflowID}`)
+            console.log(`watch for data from  ${this.config.endPoint}/${this.config.workflowID}`)
 
             this.connect(obser)
         })
