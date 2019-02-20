@@ -8,6 +8,7 @@ export class CfReceiverService {
     delayRetry
     ws: WebSocket
     config: Config
+    dontRetry = false
 
 
     constructor(
@@ -33,6 +34,7 @@ export class CfReceiverService {
 
 
     close() {
+        this.dontRetry = true
         this.ws.close()
     }
 
@@ -83,6 +85,11 @@ export class CfReceiverService {
 
 
     private retry(obser) {
+        if (this.dontRetry) {
+            this.dontRetry = false
+            return
+        }
+
         clearTimeout(this.delayRetry)
 
 
