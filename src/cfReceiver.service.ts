@@ -39,6 +39,11 @@ export class CfReceiverService {
     }
 
 
+    send(data) {
+        this.ws.send(data)
+    }
+
+
 
     connect(obser) {
         this.log('connecting to WebSocket')
