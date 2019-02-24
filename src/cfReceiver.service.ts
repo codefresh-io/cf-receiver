@@ -6,7 +6,7 @@ import { Config } from './interfaces/config.interface'
 
 export class CfReceiverService {
     delayRetry
-    ws: WebSocket
+    private ws: WebSocket
     config: Config
     dontRetry = false
 
