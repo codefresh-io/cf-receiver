@@ -1,6 +1,6 @@
 {
   "name": "@codefresh-io/cf-receiver",
-  "version": "0.0.1-alpha18",
+  "version": "0.0.1-alpha19",
   "description": "",
   "private": false,
   "main": "dist/index.js",
