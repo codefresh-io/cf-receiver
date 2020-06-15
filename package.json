@@ -1,6 +1,6 @@
 {
   "name": "@codefresh-io/cf-receiver",
-  "version": "0.0.1-alpha18",
+  "version": "0.0.1-alpha19",
   "description": "",
   "private": false,
   "main": "dist/index.js",
@@ -31,6 +31,7 @@
     "webpack": "^3.11.0"
   },
   "dependencies": {
-    "rxjs": "^6.4.0"
+    "rxjs": "^6.4.0",
+    "websocket": "1.0.31"
   }
 }

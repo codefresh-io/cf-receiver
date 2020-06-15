@@ -1,8 +1,7 @@
 import { Observable } from 'rxjs'
-
+import { w3cwebsocket as WebSocket } from 'websocket'
 
 import { Config } from './interfaces/config.interface'
-
 
 export class CfReceiverService {
     delayRetry
