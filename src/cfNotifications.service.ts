@@ -47,7 +47,7 @@ export class CfNotificationsService {
     connect(obser) {
         this.log('connecting to WebSocket')
 
-        this.ws = new WebSocket(`${this.config.endPoint}/notifications`)
+        this.ws = new WebSocket(`${this.config.endPoint}`)
 
 
         this.ws.onopen = () => {
