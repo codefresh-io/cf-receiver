@@ -49,6 +49,11 @@ export class CfNotificationsService {
 
         this.ws = new WebSocket(`${this.config.endPoint}`)
 
+        // will run when the user will unsubscribe
+        obser.add(() => {
+            this.close()
+        })
+
 
         this.ws.onopen = () => {
             obser.next({

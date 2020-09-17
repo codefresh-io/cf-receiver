@@ -50,6 +50,12 @@ export class CfReceiverService {
         this.ws = new WebSocket(`${this.config.endPoint}/${this.config.workflowID}`)
 
 
+        // will run when the user will unsubscribe
+        obser.add(() => {
+            this.close()
+        })
+
+
         this.ws.onopen = () => {
             obser.next({
                 type: 'start'
