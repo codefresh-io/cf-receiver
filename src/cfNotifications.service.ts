@@ -101,6 +101,10 @@ export class CfNotificationsService {
 
         clearTimeout(this.delayRetry)
 
+        obser.next({
+            type: 'retry'
+        })
+
 
         this.delayRetry = setTimeout(() => {
             this.log('try to reconnect to WebSocket')
