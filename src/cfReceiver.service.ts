@@ -14,7 +14,7 @@ export class CfReceiverService {
         config: Config
     ) {
         this.config = config
-        console.log('starting CfReceiverService')
+        this.log('starting CfReceiverService')
 
         this.setDefaultConfig()
     }
@@ -25,7 +25,7 @@ export class CfReceiverService {
      */
     watch() {
         return new Observable(obser => {
-            console.log(`watch for data from  ${this.config.endPoint}/${this.config.workflowID}`)
+            this.log(`watch for data from  ${this.config.endPoint}/${this.config.workflowID}`)
 
             this.connect(obser)
         })

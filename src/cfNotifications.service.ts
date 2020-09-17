@@ -14,7 +14,7 @@ export class CfNotificationsService {
         config: NotificationsConfig
     ) {
         this.config = config
-        console.log('starting CfNotificationsService')
+        this.log('starting CfNotificationsService')
 
         this.setDefaultConfig()
     }
@@ -25,7 +25,7 @@ export class CfNotificationsService {
      */
     watch() {
         return new Observable(obser => {
-            console.log(`watch for data from  ${this.config.endPoint}/notifications`)
+            this.log(`watch for data from  ${this.config.endPoint}/notifications`)
 
             this.connect(obser)
         })
