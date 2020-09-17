@@ -66,7 +66,6 @@ export class CfReceiverService {
         this.ws.onerror = (event: any) => {
             obser.next({
                 type: 'error',
-                event
             })
 
 
@@ -77,7 +76,6 @@ export class CfReceiverService {
         this.ws.onclose = (event: any) => {
             obser.next({
                 type: 'close',
-                event
             })
 
 
