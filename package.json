@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "rxjs": "^6.4.0",
-    "websocket": "1.0.31"
+    "websocket": "1.0.33"
   }
 }
