@@ -17,7 +17,12 @@ steps:
     - npm build
 
   test:
-    dockerfile: ./tests/Dockerfile
+    image: node:14.20.0-alpine
+    commands:
+    - apk add chromium
+    - export CHROME_BIN='/usr/bin/chromium-browser'
+    - npm install && npm build
+    - npm run test
 
   deploy_to_npm:
     type: npm-publish
