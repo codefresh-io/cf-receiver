@@ -7,12 +7,12 @@ steps:
     revision: '${{CF_REVISION}}'
 
   install:
-    image: node:14.20.0
+    image: node:14.20.0-alpine
     commands:
     - npm install
     
   build:
-    image: node:14.20.0
+    image: node:14.20.0-alpine
     commands:
     - npm build
 
@@ -21,7 +21,6 @@ steps:
     commands:
     - apk add chromium
     - export CHROME_BIN='/usr/bin/chromium-browser'
-    - npm install && npm build
     - npm run test
 
   deploy_to_npm:
