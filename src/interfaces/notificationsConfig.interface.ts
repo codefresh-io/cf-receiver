@@ -1,5 +1,5 @@
 export interface NotificationsConfig {
     debug: Boolean
-    endPoint: string
+    endPointBuilder: () => string,
     reconnectDelay: number
 }

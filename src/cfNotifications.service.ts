@@ -25,7 +25,7 @@ export class CfNotificationsService {
      */
     watch() {
         return new Observable(obser => {
-            this.log(`watch for data from  ${this.config.endPoint}/notifications`)
+            this.log(`watch for data from  ${this.config.endPointBuilder()}/notifications`)
 
             this.connect(obser)
         })
@@ -47,7 +47,7 @@ export class CfNotificationsService {
     connect(obser) {
         this.log('connecting to WebSocket')
 
-        this.ws = new WebSocket(`${this.config.endPoint}`)
+        this.ws = new WebSocket(`${this.config.endPointBuilder()}`)
 
         // will run when the user will unsubscribe
         obser.add(() => {
@@ -113,7 +113,8 @@ export class CfNotificationsService {
 
     private setDefaultConfig() {
         if (!this.config.debug) this.config.debug = true
-        if (!this.config.endPoint) throw 'Error -> Missing endPoint value'
+
+        if (typeof this.config.endPointBuilder !== "function" || !this.config.endPointBuilder()) throw 'Error -> Missing endPoint value'
 
         if (!this.config.reconnectDelay) this.config.reconnectDelay = 5000
     }
