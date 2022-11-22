@@ -17,9 +17,7 @@ steps:
     - npm build
 
   test:
-    image: node:14.20.0
-    commands:
-    - npm test
+    dockerfile: ./tests/Dockerfile
 
   deploy_to_npm:
     type: npm-publish
