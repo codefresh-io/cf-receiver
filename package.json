@@ -28,7 +28,7 @@
     "sinon": "^1.17.6",
     "tslint": "^5.12.1",
     "typescript": "3.2.4",
-    "webpack": "^3.11.0"
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "rxjs": "^6.5.3",
