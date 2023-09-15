@@ -1,6 +1,6 @@
 {
   "name": "@codefresh-io/cf-receiver",
-  "version": "0.0.1-alpha28",
+  "version": "0.0.1-alpha29",
   "description": "",
   "private": false,
   "main": "dist/index.js",
@@ -33,5 +33,9 @@
   "dependencies": {
     "rxjs": "^6.5.3",
     "websocket": "1.0.31"
+  },
+  "overrides": {
+    "http-cache-semantics": "4.1.1",
+    "minimatch": "3.0.5"
   }
 }
